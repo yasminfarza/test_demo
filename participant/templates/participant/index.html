@@ -1,0 +1,19 @@
+{% extends 'layouts/master.html' %}
+
+
+{% block content %}
+    <h2>This is for participant index page.</h2>
+
+    <form action="">
+
+        {% csrf_token %}
+        <label for="id_{{ form.name.name}}">Label: </label>
+        <input type="text" name="{{ form.name.name }}" id="id_{{ form.name.name}}">
+
+        <label for="id_{{ form.score.name}}">score: </label>
+        <input type="text" name="{{ form.score.name }}" id="id_{{ form.score.name}}">
+
+        <input type="submit" value="save">
+    </form>
+
+{% endblock content %}
